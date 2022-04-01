@@ -29,7 +29,6 @@
 		221CA2922588FCBC00C2DD1E /* Sequence+KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CA2912588FCBC00C2DD1E /* Sequence+KeyPath.swift */; };
 		2243BBFD1FF156EC00B49D0B /* EquatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2243BBFB1FF156D000B49D0B /* EquatableTests.swift */; };
 		22786E8525CD96620051335B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22786E8325CD96620051335B /* Media.xcassets */; };
-		228D56232554F27A00BEE75E /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 228D56222554F27A00BEE75E /* Algorithms */; };
 		22BBDA0825CC4C2F00435670 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 22BBDA0725CC4C2F00435670 /* SnapshotTesting */; };
 		23649EFC635A76022F07FFA6 /* PieChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD02157CF8CEE1189BF681DA /* PieChartDataEntry.swift */; };
 		23FA50B2730D8C7ACA091C4F /* BarChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F279974FE650E57A061B09 /* BarChartRenderer.swift */; };
@@ -142,6 +141,7 @@
 		DBC9DB402CC9BB84B76968C4 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = B137428B41C143D5115726C4 /* Description.swift */; };
 		DDE704689FDF2C0E0338488B /* CandleChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4785FEACAE4367F36FB8868 /* CandleChartData.swift */; };
 		DE0F434FE8C24C52B023370F /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF475B9593B9898853814340 /* Transformer.swift */; };
+		E0D2EEBA27F789E4007CF13F /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = E0D2EEB927F789E4007CF13F /* Algorithms */; };
 		E3B28EA1E21279DF3889BCE8 /* RadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BA6B21CBDF77A15848994F /* RadarChartDataSet.swift */; };
 		E4B2F363414E84C4D4B8A885 /* BubbleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED352A98860E031F13AFB7 /* BubbleChartView.swift */; };
 		E50D291A6B6E69BF0B56A67C /* ChartBaseDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE42E868A225C116537368 /* ChartBaseDataSet.swift */; };
@@ -347,7 +347,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228D56232554F27A00BEE75E /* Algorithms in Frameworks */,
+				E0D2EEBA27F789E4007CF13F /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,7 +754,7 @@
 			);
 			name = Charts;
 			packageProductDependencies = (
-				228D56222554F27A00BEE75E /* Algorithms */,
+				E0D2EEB927F789E4007CF13F /* Algorithms */,
 			);
 			productName = Charts;
 			productReference = 65AD9E95D9ED4DC0BD73A743 /* Charts.framework */;
@@ -808,8 +808,8 @@
 			);
 			mainGroup = 865A1CF149F52850CAB7F177;
 			packageReferences = (
-				228D56212554F27A00BEE75E /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 				22BBDA0625CC4C2F00435670 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				E0D2EEB827F789E4007CF13F /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 			);
 			productRefGroup = AB2D554102718F209377399E /* Products */;
 			projectDirPath = "";
@@ -1304,14 +1304,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		228D56212554F27A00BEE75E /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-algorithms";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		22BBDA0625CC4C2F00435670 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
@@ -1320,18 +1312,26 @@
 				minimumVersion = 1.8.2;
 			};
 		};
+		E0D2EEB827F789E4007CF13F /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		228D56222554F27A00BEE75E /* Algorithms */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 228D56212554F27A00BEE75E /* XCRemoteSwiftPackageReference "swift-algorithms" */;
-			productName = Algorithms;
-		};
 		22BBDA0725CC4C2F00435670 /* SnapshotTesting */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 22BBDA0625CC4C2F00435670 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
+		};
+		E0D2EEB927F789E4007CF13F /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0D2EEB827F789E4007CF13F /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
